@@ -1,0 +1,121 @@
+{
+  "pyweight_version": "0.1.0",
+  "modules": [
+    "sample_package",
+    "sample_package._mock_heavy_lib",
+    "sample_package.conditional",
+    "sample_package.core",
+    "sample_package.deferred_candidate",
+    "sample_package.guarded",
+    "sample_package.heavy",
+    "sample_package.hub",
+    "sample_package.models",
+    "sample_package.side_effects",
+    "sample_package.utils",
+    "sample_package.utils.helpers"
+  ],
+  "edges": [
+    {
+      "source": "sample_package",
+      "target": "sample_package.core",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package",
+      "target": "sample_package.models",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.deferred_candidate",
+      "target": "sample_package.hub",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.guarded",
+      "target": "sample_package.heavy",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.heavy",
+      "target": "sample_package._mock_heavy_lib",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.heavy",
+      "target": "sample_package.hub",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.hub",
+      "target": "sample_package.conditional",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.hub",
+      "target": "sample_package.core",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.hub",
+      "target": "sample_package.models",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.hub",
+      "target": "sample_package.utils.helpers",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.models",
+      "target": "sample_package.core",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.side_effects",
+      "target": "sample_package.hub",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    },
+    {
+      "source": "sample_package.utils.helpers",
+      "target": "sample_package",
+      "confidence": "high",
+      "is_type_checking": false,
+      "is_conditional": false
+    }
+  ],
+  "external_deps": [
+    "__future__",
+    "json",
+    "os",
+    "pathlib",
+    "re",
+    "sys",
+    "time",
+    "tomllib",
+    "typing"
+  ]
+}

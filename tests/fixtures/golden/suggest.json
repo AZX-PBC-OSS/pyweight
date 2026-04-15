@@ -1,0 +1,198 @@
+{
+  "pyweight_version": "0.1.0",
+  "deferral_candidates": [
+    {
+      "file": "sample_package/_mock_heavy_lib/__init__.py",
+      "module": "time",
+      "names": [],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/core.py",
+      "module": "os",
+      "names": [],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": [
+        "sample_package.core"
+      ]
+    },
+    {
+      "file": "sample_package/core.py",
+      "module": "pathlib",
+      "names": [
+        "Path"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": [
+        "sample_package.core"
+      ]
+    },
+    {
+      "file": "sample_package/deferred_candidate.py",
+      "module": "json",
+      "names": [],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/heavy.py",
+      "module": "json",
+      "names": [],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/heavy.py",
+      "module": "re",
+      "names": [],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/heavy.py",
+      "module": "_mock_heavy_lib",
+      "names": [
+        "HeavyPipeline"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/heavy.py",
+      "module": "_mock_heavy_lib",
+      "names": [
+        "HeavyTransformer"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/hub.py",
+      "module": "conditional",
+      "names": [
+        "load_config"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/hub.py",
+      "module": "core",
+      "names": [
+        "CoreClass"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/hub.py",
+      "module": "models",
+      "names": [
+        "SomeModel"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/hub.py",
+      "module": "utils.helpers",
+      "names": [
+        "format_name"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/models.py",
+      "module": "core",
+      "names": [
+        "CoreClass"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/utils/helpers.py",
+      "module": "",
+      "names": [
+        "core"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    }
+  ],
+  "barrels": [
+    {
+      "path": "sample_package/_mock_heavy_lib/__init__.py",
+      "qualified_name": "sample_package._mock_heavy_lib",
+      "star_imports": [],
+      "eager_imports": 1,
+      "reexported_count": 2,
+      "has_lazy_loading": false,
+      "has_all": false
+    },
+    {
+      "path": "sample_package/__init__.py",
+      "qualified_name": "sample_package",
+      "star_imports": [
+        "core"
+      ],
+      "eager_imports": 2,
+      "reexported_count": 1,
+      "has_lazy_loading": false,
+      "has_all": true
+    },
+    {
+      "path": "sample_package/utils/__init__.py",
+      "qualified_name": "sample_package.utils",
+      "star_imports": [],
+      "eager_imports": 0,
+      "reexported_count": 0,
+      "has_lazy_loading": false,
+      "has_all": false
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "pyweight_version": "0.1.0",
+  "entry_points": {
+    "sample_package.core": [
+      "sample_package.core"
+    ],
+    "sample_package.models": [
+      "sample_package.core",
+      "sample_package.models"
+    ]
+  },
+  "shared": [
+    "sample_package.core"
+  ],
+  "dead": [
+    "sample_package",
+    "sample_package._mock_heavy_lib",
+    "sample_package.conditional",
+    "sample_package.deferred_candidate",
+    "sample_package.guarded",
+    "sample_package.heavy",
+    "sample_package.hub",
+    "sample_package.side_effects",
+    "sample_package.utils",
+    "sample_package.utils.helpers"
+  ]
+}

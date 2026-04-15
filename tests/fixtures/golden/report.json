@@ -1,0 +1,772 @@
+{
+  "pyweight_version": "0.1.0",
+  "schema_version": "1",
+  "timestamp": "2026-04-15T22:07:00.019652+00:00",
+  "package": "sample_package",
+  "entry_point": "sample_package.core",
+  "reachability": {
+    "entry_point": "sample_package.core",
+    "required_modules": [
+      "sample_package.core"
+    ],
+    "unreachable_modules": [
+      "sample_package",
+      "sample_package._mock_heavy_lib",
+      "sample_package.conditional",
+      "sample_package.deferred_candidate",
+      "sample_package.guarded",
+      "sample_package.heavy",
+      "sample_package.hub",
+      "sample_package.models",
+      "sample_package.side_effects",
+      "sample_package.utils",
+      "sample_package.utils.helpers"
+    ],
+    "required_cost_mb": 0.0,
+    "unreachable_cost_mb": 0.0,
+    "root_causes": [],
+    "unknown_origins": [],
+    "import_paths": {
+      "sample_package.core": [
+        "sample_package.core"
+      ]
+    },
+    "confidence": "low"
+  },
+  "required_module_count": 1,
+  "unreachable_module_count": 10,
+  "barrels": [
+    {
+      "path": "sample_package/_mock_heavy_lib/__init__.py",
+      "qualified_name": "sample_package._mock_heavy_lib",
+      "star_imports": [],
+      "eager_imports": 1,
+      "reexported_count": 2,
+      "has_lazy_loading": false,
+      "has_all": false
+    },
+    {
+      "path": "sample_package/__init__.py",
+      "qualified_name": "sample_package",
+      "star_imports": [
+        "core"
+      ],
+      "eager_imports": 2,
+      "reexported_count": 1,
+      "has_lazy_loading": false,
+      "has_all": true
+    },
+    {
+      "path": "sample_package/utils/__init__.py",
+      "qualified_name": "sample_package.utils",
+      "star_imports": [],
+      "eager_imports": 0,
+      "reexported_count": 0,
+      "has_lazy_loading": false,
+      "has_all": false
+    }
+  ],
+  "hotspots": [
+    {
+      "module": "sample_package",
+      "fan_in": 1,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.utils.helpers -> sample_package"
+      ]
+    },
+    {
+      "module": "sample_package._mock_heavy_lib",
+      "fan_in": 1,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.heavy -> sample_package._mock_heavy_lib"
+      ]
+    },
+    {
+      "module": "sample_package.conditional",
+      "fan_in": 1,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.hub -> sample_package.conditional"
+      ]
+    },
+    {
+      "module": "sample_package.core",
+      "fan_in": 3,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package -> sample_package.core",
+        "sample_package.hub -> sample_package.core",
+        "sample_package.models -> sample_package.core"
+      ]
+    },
+    {
+      "module": "sample_package.deferred_candidate",
+      "fan_in": 0,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": []
+    },
+    {
+      "module": "sample_package.guarded",
+      "fan_in": 0,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": []
+    },
+    {
+      "module": "sample_package.heavy",
+      "fan_in": 1,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.guarded -> sample_package.heavy"
+      ]
+    },
+    {
+      "module": "sample_package.hub",
+      "fan_in": 3,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.deferred_candidate -> sample_package.hub",
+        "sample_package.heavy -> sample_package.hub",
+        "sample_package.side_effects -> sample_package.hub"
+      ]
+    },
+    {
+      "module": "sample_package.models",
+      "fan_in": 2,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package -> sample_package.models",
+        "sample_package.hub -> sample_package.models"
+      ]
+    },
+    {
+      "module": "sample_package.side_effects",
+      "fan_in": 0,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": []
+    },
+    {
+      "module": "sample_package.utils",
+      "fan_in": 0,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": []
+    },
+    {
+      "module": "sample_package.utils.helpers",
+      "fan_in": 1,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.hub -> sample_package.utils.helpers"
+      ]
+    }
+  ],
+  "hub_dependencies": [
+    {
+      "module": "sample_package.hub",
+      "fan_in": 3,
+      "fan_out": 4,
+      "hub_score": 12.0,
+      "hub_type": "code",
+      "cost_mb": 0.0
+    }
+  ],
+  "dead_exports": [
+    {
+      "module": "sample_package",
+      "symbol_name": "CoreClass",
+      "export_mechanism": "__all__",
+      "confidence": "high"
+    },
+    {
+      "module": "sample_package",
+      "symbol_name": "SomeModel",
+      "export_mechanism": "__all__",
+      "confidence": "high"
+    },
+    {
+      "module": "sample_package",
+      "symbol_name": "helper_fn",
+      "export_mechanism": "__all__",
+      "confidence": "high"
+    },
+    {
+      "module": "sample_package.conditional",
+      "symbol_name": "tomllib",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    },
+    {
+      "module": "sample_package.deferred_candidate",
+      "symbol_name": "CONSTANT",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    },
+    {
+      "module": "sample_package.deferred_candidate",
+      "symbol_name": "get_constant",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    },
+    {
+      "module": "sample_package.deferred_candidate",
+      "symbol_name": "load_data",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    },
+    {
+      "module": "sample_package.guarded",
+      "symbol_name": "create_processor",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    },
+    {
+      "module": "sample_package.side_effects",
+      "symbol_name": "register",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    }
+  ],
+  "deferral_candidates": [
+    {
+      "file": "sample_package/_mock_heavy_lib/__init__.py",
+      "module": "time",
+      "names": [],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/core.py",
+      "module": "os",
+      "names": [],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": [
+        "sample_package.core"
+      ]
+    },
+    {
+      "file": "sample_package/core.py",
+      "module": "pathlib",
+      "names": [
+        "Path"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": [
+        "sample_package.core"
+      ]
+    },
+    {
+      "file": "sample_package/deferred_candidate.py",
+      "module": "json",
+      "names": [],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/heavy.py",
+      "module": "json",
+      "names": [],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/heavy.py",
+      "module": "re",
+      "names": [],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/heavy.py",
+      "module": "_mock_heavy_lib",
+      "names": [
+        "HeavyPipeline"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/heavy.py",
+      "module": "_mock_heavy_lib",
+      "names": [
+        "HeavyTransformer"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/hub.py",
+      "module": "conditional",
+      "names": [
+        "load_config"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/hub.py",
+      "module": "core",
+      "names": [
+        "CoreClass"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/hub.py",
+      "module": "models",
+      "names": [
+        "SomeModel"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/hub.py",
+      "module": "utils.helpers",
+      "names": [
+        "format_name"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/models.py",
+      "module": "core",
+      "names": [
+        "CoreClass"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    },
+    {
+      "file": "sample_package/utils/helpers.py",
+      "module": "",
+      "names": [
+        "core"
+      ],
+      "escape_level": "function_local",
+      "cost_mb": 0.0,
+      "confidence": "high",
+      "risk": "safe",
+      "evidence": []
+    }
+  ],
+  "chokepoints": [
+    "sample_package.hub",
+    "sample_package.heavy"
+  ],
+  "cycles": [],
+  "dsm": {
+    "modules": [
+      "sample_package.deferred_candidate",
+      "sample_package.guarded",
+      "sample_package.side_effects",
+      "sample_package.utils",
+      "sample_package.heavy",
+      "sample_package._mock_heavy_lib",
+      "sample_package.hub",
+      "sample_package.conditional",
+      "sample_package.utils.helpers",
+      "sample_package",
+      "sample_package.models",
+      "sample_package.core"
+    ],
+    "layer_assignments": {
+      "sample_package.deferred_candidate": 0,
+      "sample_package.guarded": 1,
+      "sample_package.side_effects": 2,
+      "sample_package.utils": 3,
+      "sample_package.heavy": 4,
+      "sample_package._mock_heavy_lib": 5,
+      "sample_package.hub": 6,
+      "sample_package.conditional": 7,
+      "sample_package.utils.helpers": 8,
+      "sample_package": 9,
+      "sample_package.models": 10,
+      "sample_package.core": 11
+    },
+    "violations": [],
+    "layering_health": 1.0
+  },
+  "suggested_refactorings": [
+    {
+      "id": "refactor-0015",
+      "impact": 0.1,
+      "type": "remove_dead_export",
+      "file": "sample_package.py",
+      "lineno": 0,
+      "description": "Remove dead export 'CoreClass' from 'sample_package' (__all__). Confidence: high.",
+      "estimated_savings_mb": 0.1,
+      "risk": "low",
+      "confidence": "high",
+      "evidence": [
+        "Symbol 'CoreClass' never imported by any module"
+      ]
+    },
+    {
+      "id": "refactor-0016",
+      "impact": 0.1,
+      "type": "remove_dead_export",
+      "file": "sample_package.py",
+      "lineno": 0,
+      "description": "Remove dead export 'SomeModel' from 'sample_package' (__all__). Confidence: high.",
+      "estimated_savings_mb": 0.1,
+      "risk": "low",
+      "confidence": "high",
+      "evidence": [
+        "Symbol 'SomeModel' never imported by any module"
+      ]
+    },
+    {
+      "id": "refactor-0017",
+      "impact": 0.1,
+      "type": "remove_dead_export",
+      "file": "sample_package.py",
+      "lineno": 0,
+      "description": "Remove dead export 'helper_fn' from 'sample_package' (__all__). Confidence: high.",
+      "estimated_savings_mb": 0.1,
+      "risk": "low",
+      "confidence": "high",
+      "evidence": [
+        "Symbol 'helper_fn' never imported by any module"
+      ]
+    },
+    {
+      "id": "refactor-0018",
+      "impact": 0.06999999999999999,
+      "type": "remove_dead_export",
+      "file": "sample_package/conditional.py",
+      "lineno": 0,
+      "description": "Remove dead export 'tomllib' from 'sample_package.conditional' (public_def). Confidence: medium.",
+      "estimated_savings_mb": 0.06999999999999999,
+      "risk": "low",
+      "confidence": "medium",
+      "evidence": [
+        "Symbol 'tomllib' never imported by any module"
+      ]
+    },
+    {
+      "id": "refactor-0019",
+      "impact": 0.06999999999999999,
+      "type": "remove_dead_export",
+      "file": "sample_package/deferred_candidate.py",
+      "lineno": 0,
+      "description": "Remove dead export 'CONSTANT' from 'sample_package.deferred_candidate' (public_def). Confidence: medium.",
+      "estimated_savings_mb": 0.06999999999999999,
+      "risk": "low",
+      "confidence": "medium",
+      "evidence": [
+        "Symbol 'CONSTANT' never imported by any module"
+      ]
+    },
+    {
+      "id": "refactor-0020",
+      "impact": 0.06999999999999999,
+      "type": "remove_dead_export",
+      "file": "sample_package/deferred_candidate.py",
+      "lineno": 0,
+      "description": "Remove dead export 'get_constant' from 'sample_package.deferred_candidate' (public_def). Confidence: medium.",
+      "estimated_savings_mb": 0.06999999999999999,
+      "risk": "low",
+      "confidence": "medium",
+      "evidence": [
+        "Symbol 'get_constant' never imported by any module"
+      ]
+    },
+    {
+      "id": "refactor-0021",
+      "impact": 0.06999999999999999,
+      "type": "remove_dead_export",
+      "file": "sample_package/deferred_candidate.py",
+      "lineno": 0,
+      "description": "Remove dead export 'load_data' from 'sample_package.deferred_candidate' (public_def). Confidence: medium.",
+      "estimated_savings_mb": 0.06999999999999999,
+      "risk": "low",
+      "confidence": "medium",
+      "evidence": [
+        "Symbol 'load_data' never imported by any module"
+      ]
+    },
+    {
+      "id": "refactor-0022",
+      "impact": 0.06999999999999999,
+      "type": "remove_dead_export",
+      "file": "sample_package/guarded.py",
+      "lineno": 0,
+      "description": "Remove dead export 'create_processor' from 'sample_package.guarded' (public_def). Confidence: medium.",
+      "estimated_savings_mb": 0.06999999999999999,
+      "risk": "low",
+      "confidence": "medium",
+      "evidence": [
+        "Symbol 'create_processor' never imported by any module"
+      ]
+    },
+    {
+      "id": "refactor-0023",
+      "impact": 0.06999999999999999,
+      "type": "remove_dead_export",
+      "file": "sample_package/side_effects.py",
+      "lineno": 0,
+      "description": "Remove dead export 'register' from 'sample_package.side_effects' (public_def). Confidence: medium.",
+      "estimated_savings_mb": 0.06999999999999999,
+      "risk": "low",
+      "confidence": "medium",
+      "evidence": [
+        "Symbol 'register' never imported by any module"
+      ]
+    },
+    {
+      "id": "refactor-0025",
+      "impact": 0.01,
+      "type": "decouple_hub",
+      "file": "sample_package/heavy.py",
+      "lineno": 0,
+      "description": "Module 'sample_package.heavy' is a chokepoint (articulation point) \u2014 removing it would disconnect the import graph. Consider decoupling.",
+      "estimated_savings_mb": 0.0,
+      "risk": "medium",
+      "confidence": "low",
+      "evidence": [
+        "chokepoint: sample_package.heavy is an articulation point"
+      ]
+    },
+    {
+      "id": "refactor-0001",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/_mock_heavy_lib/__init__.py",
+      "lineno": 3,
+      "description": "Defer import of 'time' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0002",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/core.py",
+      "lineno": 2,
+      "description": "Defer import of 'os' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": [
+        "sample_package.core"
+      ]
+    },
+    {
+      "id": "refactor-0003",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/core.py",
+      "lineno": 3,
+      "description": "Defer import of 'pathlib' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": [
+        "sample_package.core"
+      ]
+    },
+    {
+      "id": "refactor-0004",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/deferred_candidate.py",
+      "lineno": 2,
+      "description": "Defer import of 'json' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0005",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/heavy.py",
+      "lineno": 3,
+      "description": "Defer import of 'json' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0006",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/heavy.py",
+      "lineno": 4,
+      "description": "Defer import of 're' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0007",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/heavy.py",
+      "lineno": 6,
+      "description": "Defer import of '_mock_heavy_lib' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0008",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/heavy.py",
+      "lineno": 6,
+      "description": "Defer import of '_mock_heavy_lib' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0009",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/hub.py",
+      "lineno": 4,
+      "description": "Defer import of 'conditional' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0010",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/hub.py",
+      "lineno": 5,
+      "description": "Defer import of 'core' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0011",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/hub.py",
+      "lineno": 9,
+      "description": "Defer import of 'models' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0012",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/hub.py",
+      "lineno": 10,
+      "description": "Defer import of 'utils.helpers' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0013",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/models.py",
+      "lineno": 2,
+      "description": "Defer import of 'core' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0014",
+      "impact": 0.0,
+      "type": "defer_import",
+      "file": "sample_package/utils/helpers.py",
+      "lineno": 2,
+      "description": "Defer import of '' \u2014 used only in function_local scope. Risk: safe. Confidence: high.",
+      "estimated_savings_mb": 0.0,
+      "risk": "safe",
+      "confidence": "high",
+      "evidence": []
+    },
+    {
+      "id": "refactor-0024",
+      "impact": 0.0,
+      "type": "decouple_hub",
+      "file": "sample_package/hub.py",
+      "lineno": 0,
+      "description": "Decouple hub 'sample_package.hub' (fan-in=3, fan-out=4, type=code). Split responsibilities or introduce an abstraction layer.",
+      "estimated_savings_mb": 0.0,
+      "risk": "high",
+      "confidence": "medium",
+      "evidence": [
+        "hub_score: 12",
+        "chokepoint: sample_package.hub is an articulation point"
+      ]
+    }
+  ]
+}
