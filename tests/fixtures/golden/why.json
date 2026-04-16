@@ -1,0 +1,9 @@
+{
+  "pyweight_version": "0.1.0",
+  "entry_point": "sample_package.core",
+  "target": "sample_package.heavy",
+  "paths": [],
+  "critical_edges": [],
+  "suggested_cuts": null,
+  "total_cost_mb": 0.0
+}

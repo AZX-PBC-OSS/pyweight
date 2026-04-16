@@ -1,0 +1,30 @@
+{
+  "pyweight_version": "0.1.0",
+  "entry_point": "sample_package.core",
+  "required_modules": [
+    "sample_package.core"
+  ],
+  "unreachable_modules": [
+    "sample_package",
+    "sample_package._mock_heavy_lib",
+    "sample_package.conditional",
+    "sample_package.deferred_candidate",
+    "sample_package.guarded",
+    "sample_package.heavy",
+    "sample_package.hub",
+    "sample_package.models",
+    "sample_package.side_effects",
+    "sample_package.utils",
+    "sample_package.utils.helpers"
+  ],
+  "required_cost_mb": 0.0,
+  "unreachable_cost_mb": 0.0,
+  "root_causes": [],
+  "unknown_origins": [],
+  "import_paths": {
+    "sample_package.core": [
+      "sample_package.core"
+    ]
+  },
+  "confidence": "low"
+}

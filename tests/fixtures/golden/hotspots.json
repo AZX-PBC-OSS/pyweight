@@ -1,0 +1,110 @@
+{
+  "pyweight_version": "0.1.0",
+  "hotspots": [
+    {
+      "module": "sample_package",
+      "fan_in": 1,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.utils.helpers -> sample_package"
+      ]
+    },
+    {
+      "module": "sample_package._mock_heavy_lib",
+      "fan_in": 1,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.heavy -> sample_package._mock_heavy_lib"
+      ]
+    },
+    {
+      "module": "sample_package.conditional",
+      "fan_in": 1,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.hub -> sample_package.conditional"
+      ]
+    },
+    {
+      "module": "sample_package.core",
+      "fan_in": 3,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package -> sample_package.core",
+        "sample_package.hub -> sample_package.core",
+        "sample_package.models -> sample_package.core"
+      ]
+    },
+    {
+      "module": "sample_package.deferred_candidate",
+      "fan_in": 0,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": []
+    },
+    {
+      "module": "sample_package.guarded",
+      "fan_in": 0,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": []
+    },
+    {
+      "module": "sample_package.heavy",
+      "fan_in": 1,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.guarded -> sample_package.heavy"
+      ]
+    },
+    {
+      "module": "sample_package.hub",
+      "fan_in": 3,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.deferred_candidate -> sample_package.hub",
+        "sample_package.heavy -> sample_package.hub",
+        "sample_package.side_effects -> sample_package.hub"
+      ]
+    },
+    {
+      "module": "sample_package.models",
+      "fan_in": 2,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package -> sample_package.models",
+        "sample_package.hub -> sample_package.models"
+      ]
+    },
+    {
+      "module": "sample_package.side_effects",
+      "fan_in": 0,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": []
+    },
+    {
+      "module": "sample_package.utils",
+      "fan_in": 0,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": []
+    },
+    {
+      "module": "sample_package.utils.helpers",
+      "fan_in": 1,
+      "cost_mb": 0.0,
+      "score": 0.0,
+      "evidence": [
+        "sample_package.hub -> sample_package.utils.helpers"
+      ]
+    }
+  ]
+}

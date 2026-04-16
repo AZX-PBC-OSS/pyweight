@@ -1,0 +1,102 @@
+{
+  "pyweight_version": "0.1.0",
+  "dsm": {
+    "modules": [
+      "sample_package.deferred_candidate",
+      "sample_package.guarded",
+      "sample_package.side_effects",
+      "sample_package.utils",
+      "sample_package.heavy",
+      "sample_package._mock_heavy_lib",
+      "sample_package.hub",
+      "sample_package.conditional",
+      "sample_package.utils.helpers",
+      "sample_package",
+      "sample_package.models",
+      "sample_package.core"
+    ],
+    "layer_assignments": {
+      "sample_package.deferred_candidate": 0,
+      "sample_package.guarded": 1,
+      "sample_package.side_effects": 2,
+      "sample_package.utils": 3,
+      "sample_package.heavy": 4,
+      "sample_package._mock_heavy_lib": 5,
+      "sample_package.hub": 6,
+      "sample_package.conditional": 7,
+      "sample_package.utils.helpers": 8,
+      "sample_package": 9,
+      "sample_package.models": 10,
+      "sample_package.core": 11
+    },
+    "violations": [],
+    "layering_health": 1.0
+  },
+  "hubs": [
+    {
+      "module": "sample_package.hub",
+      "fan_in": 3,
+      "fan_out": 4,
+      "hub_score": 12.0,
+      "hub_type": "code",
+      "cost_mb": 0.0
+    }
+  ],
+  "dead_exports": [
+    {
+      "module": "sample_package",
+      "symbol_name": "CoreClass",
+      "export_mechanism": "__all__",
+      "confidence": "high"
+    },
+    {
+      "module": "sample_package",
+      "symbol_name": "SomeModel",
+      "export_mechanism": "__all__",
+      "confidence": "high"
+    },
+    {
+      "module": "sample_package",
+      "symbol_name": "helper_fn",
+      "export_mechanism": "__all__",
+      "confidence": "high"
+    },
+    {
+      "module": "sample_package.conditional",
+      "symbol_name": "tomllib",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    },
+    {
+      "module": "sample_package.deferred_candidate",
+      "symbol_name": "CONSTANT",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    },
+    {
+      "module": "sample_package.deferred_candidate",
+      "symbol_name": "get_constant",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    },
+    {
+      "module": "sample_package.deferred_candidate",
+      "symbol_name": "load_data",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    },
+    {
+      "module": "sample_package.guarded",
+      "symbol_name": "create_processor",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    },
+    {
+      "module": "sample_package.side_effects",
+      "symbol_name": "register",
+      "export_mechanism": "public_def",
+      "confidence": "medium"
+    }
+  ],
+  "cycles": []
+}
