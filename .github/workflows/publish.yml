@@ -63,7 +63,7 @@ jobs:
           cd /tmp && $GITHUB_WORKSPACE/test-env/bin/python -c "import importlib.metadata, os; print(importlib.metadata.version(os.environ['DIST_NAME']))"
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v7.0.1
+        uses: actions/upload-artifact@v7
         with:
           name: release-dist
           path: dist/
