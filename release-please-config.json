@@ -1,6 +1,10 @@
 {
+  "release-type": "python",
+  "package-name": "pyweight",
   "packages": {
     ".": {
+      "release-type": "python",
+      "package-name": "pyweight",
       "include-component-in-tag": false,
       "extra-files": [
         "pyweight/__init__.py"
