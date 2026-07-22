@@ -1,0 +1,10 @@
+{
+  "packages": {
+    ".": {
+      "include-component-in-tag": false,
+      "extra-files": [
+        "pyweight/__init__.py"
+      ]
+    }
+  }
+}
